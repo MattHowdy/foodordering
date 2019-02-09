@@ -1,3 +1,9 @@
+postgresql db running
+config file set db connection
+startup application with node server/app.js command
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
