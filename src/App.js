@@ -1,20 +1,29 @@
 import React, { Component } from 'react';
-import './App.css';
+import { Route, BrowserRouter, Switch} from 'react-router-dom';
+
 import Layout from './components/common/Layout/Layout';
-import Categories from './components/Category/Categories';
+import MainPage from "./containers/MainPage";
+import UserManagement from './containers/UserManagement';
+import NoPageFound from './containers/NoPageFound';
 
 
 class App extends Component {
+
+
   render() {
-    return (
-      <div className="App">
-          <Layout>
-              <p>Welcome ony FoodOrdering</p>
-              <Categories/>
-              <div>Show items</div>
-          </Layout>
-      </div>
-    );
+
+        return (
+              <BrowserRouter>
+                  <Layout>
+                    <Switch>
+                        <Route exact path="/" render={(props) => <MainPage {...props}/>}/>
+                        <Route exact path="/login" render={(props) => <UserManagement {...props}/>}/>
+                        <Route exact path="/login" render={(props) => <UserManagement {...props}/>}/>
+                        <Route component={NoPageFound}/>
+                    </Switch>
+                  </Layout>
+              </BrowserRouter>
+        );
   }
 }
 

@@ -1,0 +1,41 @@
+.UserManagement{
+    margin: 150px auto;
+    padding: 20px;
+    width: 400px;
+    height: 420px;
+    background-color: lightgrey;
+    color: #282c34;
+}
+
+h1{
+    padding-top: 10px;
+    text-align: center;
+}
+
+form * {
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+form input {
+    text-align: left;
+    padding: 3px;
+    max-width: 300px;
+}
+
+.SubmitButton {
+    color: orange;
+    background-color: whitesmoke;
+    margin: 30px auto ;
+    border-color: orange;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+input {
+    border-radius: 5%;
+}
+
