@@ -21,4 +21,10 @@ router.get('/items/:id', (req,res) =>{
 });
 
 
+//get items by category
+router.post('/items/:category', (req,res) =>{
+    itemController.getItemsByCategory(req,res)
+});
+
+
 module.exports = router;

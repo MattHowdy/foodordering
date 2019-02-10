@@ -20,5 +20,13 @@ module.exports = {
            },
            attributes: ['menuitems', 'id'],
        }).then(item => res.json(item));
-   }
+   },
+    getItemsByCategory: (req,res) =>{
+        Item.findAll({
+            where: {
+                category: req.params.category
+            },
+            attributes: ['id', 'category', 'description','name', 'price','spicy','vegetarian'],
+        }).then(item => res.json(item));
+    }
 }

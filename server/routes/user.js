@@ -13,7 +13,6 @@ router.post('/register', (req,res) =>{
 // login user
 router.post('/login', VerifyToken, (req, res, next) => {
     userController.login(req,res);
-    //res.redirect("/home");
 });
 
 
