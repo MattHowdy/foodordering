@@ -1,0 +1,12 @@
+.Categories{
+    margin: 30px 120px 100px 120px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Layout{
+    font-family: proxima-nova, sans-serif;
+    font-size: 22px;
+    color: #282c34;
+    margin: 80px 50px;
+}
