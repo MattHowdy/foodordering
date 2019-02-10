@@ -1,0 +1,21 @@
+.NavigationItem{
+    margin: 10px 10px;
+    box-sizing: border-box;
+    display: block;
+    font-family: proxima-nova,sans-serif;
+    font-size: 22px;
+    width: auto;
+}
+
+
+.FooterItem a{
+    color: grey;
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+.FooterItem a:hover{
+    color: #282c34;
+}

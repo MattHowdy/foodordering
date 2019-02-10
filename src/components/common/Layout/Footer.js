@@ -1,15 +1,17 @@
-import React, {Component,Fragment} from 'react';
+import React from 'react';
+
+import classes from './Footer.css';
+import FooterItems from './FooterItems';
 
 
-class Footer extends Component{
-    render() {
-        return (
-            <Fragment>
-                Footer1
-                Footer2
-            </Fragment>
-        );
-    }
-};
+const footer = () => (
+    <footer className={classes.Footer}>
+        <nav>
+            <FooterItems/>
+        </nav>
+    </footer>
+)
 
-export default Footer;
+
+
+export default footer;

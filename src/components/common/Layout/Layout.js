@@ -3,7 +3,6 @@ import React, {Component,Fragment} from 'react';
 import Footer from './Footer';
 import Navbar from './Navbar';
 
-
 class Layout extends Component{
     render() {
         return (
