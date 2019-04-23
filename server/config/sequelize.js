@@ -2,11 +2,11 @@ const Sequelize = require('sequelize');
 const UserModel = require('../models/user');
 const ItemModel = require('../models/item');
 
-const config = require('./config');
 
- const sequelize = new Sequelize(config.database, config.username, config.password, {
-        host: config.host,
-        dialect: config.dialect,
+
+ const sequelize = new Sequelize(process.env.DATABASE, process.env.USERNAME, process.env.PASSWORD, {
+        host: process.env.HOST,
+        dialect: process.env.DIALECT,
         operatorsAliases: false,
 
         pool: {
