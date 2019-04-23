@@ -4,14 +4,14 @@ const userController = require('../controllers/userController');
 var VerifyToken = require('../config/auth/VerifyToken');
 
 
-// register user
+// register auth
 router.post('/register', (req,res) =>{
   userController.register(req, res);
 });
 
-
-// login user
-router.post('/login', VerifyToken, (req, res, next) => {
+// VerifyToken is passed as 2. parameter into the router.post(url, verifyToken.,calback) function
+// login auth
+router.post('/login', (req, res) => {
     userController.login(req,res);
 });
 
@@ -35,8 +35,8 @@ router.get('/me', (req, res, next) => {
 });
 
 
-// FIND items for a user
-router.get('/:user/items', (req,res) =>{
+// FIND items for a auth
+router.get('/:auth/items', (req,res) =>{
     // SEND LOGIN DETAILS
 });
 
