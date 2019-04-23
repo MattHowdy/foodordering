@@ -1,7 +1,7 @@
 var jwt = require('jsonwebtoken');
 
 
-function verifyToken(req, res, next) {
+const verifyToken = (req, res, next)=> {
     let token = req.headers['x-access-token'];
     if (!token)
         return res.status(403).send({ auth: false, message: 'No token provided.' });
@@ -13,4 +13,14 @@ function verifyToken(req, res, next) {
         next();
     });
 }
-module.exports = verifyToken;
+
+
+const generateToken = (id)=>{
+    const token = jwt.sign({id}, process.env.SECRETKEY, {
+        expiresIn: 86400
+    })
+    return token
+}
+
+
+module.exports = { verifyToken,  generateToken};

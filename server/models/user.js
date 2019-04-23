@@ -1,6 +1,6 @@
 
 
-module.exports = (sequelize, type) => {
+module.exports = function (sequelize, type){
    return sequelize.define('users', {
       id: {
          type: type.INTEGER,
@@ -18,6 +18,17 @@ module.exports = (sequelize, type) => {
       password : {
          type: type.STRING,
          required: true,
+      },
+      tokens : {
+         type : type.ARRAY(type.STRING)
+         // type: type.STRING,
+         // get: function() {
+         //    return JSON.parse(this.getDataValue('tokens'));
+         // },
+         // set: function(val) {
+         //    return this.setDataValue('tokens', JSON.stringify(val));
+         // }
       }
+
    })
-};
+}

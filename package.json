@@ -72,8 +72,8 @@
   },
   "scripts": {
     "start-node": "env-cmd ./server/config/.env.local nodemon server/app.js",
-    "start-node-react": "concurrently \"npm run start\" \"node scripts/start.js\"",
     "start-react" : "node scripts/start.js",
+    "start-node-react": "concurrently \"npm run start-react\" \"npm run start-node\"",
     "proxy": "http://localhost:5000",
     "build": "node scripts/build.js"
   },

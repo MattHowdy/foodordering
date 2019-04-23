@@ -1,29 +1,29 @@
 const express = require('express');
 const router = express.Router();
-const itemController = require('../controllers/itemController');
+const itemService = require('../services/itemService');
 
 
 // get all items
 router.get('/items', (req,res) =>{
-    itemController.getAll(req,res)
+    itemService.getAll(req,res)
 });
 
 
 // main page get all categories
 router.get('/categories', (req,res) =>{
-    itemController.getAllCategories(req,res)
+    itemService.getAllCategories(req,res)
 });
 
 
 //get items by Category
 router.post('/category/:category', (req,res) =>{
-    itemController.getItemsByCategory(req,res)
+    itemService.getItemsByCategory(req,res)
 });
 
 
 //get one item
 router.get('/item/:id', (req,res) =>{
-    itemController.getItem(req,res)
+    itemService.getItem(req,res)
 });
 
 
